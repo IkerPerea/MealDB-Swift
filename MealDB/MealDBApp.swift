@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MealDBApp: App {
+    @ObservedObject var viewModel = MealViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExploreView(viewModel: viewModel)
         }
     }
 }
